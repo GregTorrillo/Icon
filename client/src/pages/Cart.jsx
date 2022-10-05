@@ -9,6 +9,7 @@ import StripeCheckout from "react-stripe-checkout";
 import { useEffect, useState } from "react";
 import { userRequest } from "../requestMethods";
 import { useHistory } from "react-router";
+import { Link } from "react-router-dom";
 import { mobile } from "../responsive";
 import { tablet } from "../responsive";
 import { laptop } from "../responsive";
@@ -45,15 +46,13 @@ const TopButton = styled.button`
   background-color: ${(props) =>
     props.type === "filled" ? "black" : "transparent"};
   color: ${(props) => props.type === "filled" && "white"};
+  &:hover {
+    background-color: #FFC14D;
+  }
 `;
 
 const TopTexts = styled.div`
   ${mobile({ display: "none" })}
-`;
-const TopText = styled.span`
-  text-decoration: underline;
-  cursor: pointer;
-  margin: 0px 10px;
 `;
 
 const Bottom = styled.div`
@@ -156,11 +155,10 @@ const SummaryItem = styled.div`
   ${mobile({ fontSize: "12px" })}
 `;
 
-const SummaryItemText = styled.span`
-`;
+const SummaryItemText = styled.span``;
 
 const SummaryItemPrice = styled.span`
-${mobile({ marginRight: "-10px" })}
+  ${mobile({ marginRight: "-10px" })}
 `;
 
 const Button = styled.button`
@@ -204,12 +202,10 @@ const Cart = () => {
       <Wrapper>
         <Title>YOUR CART</Title>
         <Top>
-          <TopButton>CONTINUE SHOPPING</TopButton>
-          <TopTexts>
-            <TopText>Shopping Bag(2)</TopText>
-            <TopText>Your Wishlist (0)</TopText>
-          </TopTexts>
-          <TopButton type="filled">CHECKOUT NOW</TopButton>
+          <Link to="/">
+            <TopButton>CONTINUE SHOPPING</TopButton>
+          </Link>
+          <TopTexts></TopTexts>
         </Top>
         <Bottom>
           <Info>
@@ -252,11 +248,11 @@ const Cart = () => {
             </SummaryItem>
             <SummaryItem>
               <SummaryItemText>Estimated Shipping</SummaryItemText>
-              <SummaryItemPrice>$5.90</SummaryItemPrice>
+              <SummaryItemPrice>$5.00</SummaryItemPrice>
             </SummaryItem>
             <SummaryItem>
               <SummaryItemText>Shipping Discount</SummaryItemText>
-              <SummaryItemPrice>$-5.90</SummaryItemPrice>
+              <SummaryItemPrice>$-5.00</SummaryItemPrice>
             </SummaryItem>
             <SummaryItem type="total">
               <SummaryItemText>Total</SummaryItemText>
@@ -264,7 +260,7 @@ const Cart = () => {
             </SummaryItem>
             <StripeCheckout
               name="Icon"
-              image="/img/icon-logo.png" 
+              image="/img/icon-logo.png"
               billingAddress
               shippingAddress
               description={`Your total is $${cart.total}`}

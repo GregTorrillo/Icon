@@ -3,18 +3,28 @@ import styled from "styled-components";
 import Product from "./Product";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { mobile } from "../responsive";
+import { tablet } from "../responsive";
+import { laptop } from "../responsive";
 
 const Container = styled.div`
   padding: 0 300px 200px 300px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  ${mobile({ padding: "0px" })}
+  ${tablet({ padding: "0px 0px 150px 0px"})}
+  ${laptop({ padding: "0px 150px 150px 150px"})}
 `;
 
 const Title = styled.h1`
     color:black;
     font-size: 40px;
-    padding: 50px 0px 50px 300px;
+    padding: 50px 0px 50px 310px;
+    ${mobile({ padding: "20px 0px 10px 10px", fontSize: "24px" })}
+    ${tablet({ padding: "100px 0px 50px 60px"})}
+    ${laptop({ padding: "50px 0px 50px 160px", fontSize: "32px"})}
+
 `;
 
 const Products = ({cat, filters, sort}) => {

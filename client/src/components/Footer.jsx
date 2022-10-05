@@ -24,15 +24,17 @@ const Left = styled.div`
 `;
 
 const Logo = styled.h1`
-  
+  ${mobile({ marginLeft: "-15px" })}
 `;
 
 const Desc = styled.p`
   padding: 10px 0px 20px 20px;
+  ${mobile({ padding: "0px 0px 20px 0px" })}
 `;
 
 const SocialContainer = styled.div`
   display: flex;
+  ${mobile({ marginLeft: "-15px" })}
 `;
 
 const SocialIcon = styled.div`

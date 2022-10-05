@@ -2,19 +2,22 @@ import { Link } from "react-router-dom";
 import React from "react";
 import styled from "styled-components";
 import { mobile } from "../responsive";
+import { tablet } from "../responsive";
+import { laptop } from "../responsive";
 
 const Container = styled.div`
   flex: 1;
   padding: 0 5px;
   height: 70vh;
   position: relative;
+  ${tablet({ height: "50vh"})}
 `;
 
 const Image = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
-  ${mobile({ height: "20vh" })}
+  ${mobile({ height: "55vh" })}
 `;
 
 const Info = styled.div`
@@ -34,6 +37,9 @@ const Title = styled.h1`
     margin-bottom: 20px;
     font-size: 60px;
     text-shadow: 2px 2px 5px #000000;
+    ${mobile({ fontSize: "50px" })}
+    ${tablet({ fontSize: "50px"})}
+    ${laptop({ fontSize: "50px"})}
 `;
 
 const Button = styled.button`
@@ -49,6 +55,9 @@ const Button = styled.button`
       background-color: #FFC14D;
       color: white;
     }
+    ${mobile({ padding: "10px" })}
+    ${tablet({ padding: "10px" })}
+    ${laptop({ padding: "10px" })}
 `;
 
 

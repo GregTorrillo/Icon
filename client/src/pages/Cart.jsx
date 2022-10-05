@@ -4,12 +4,14 @@ import styled from "styled-components";
 import Announcement from "../components/Announcement";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
-import { mobile } from "../responsive";
 import { useSelector } from "react-redux";
 import StripeCheckout from "react-stripe-checkout";
 import { useEffect, useState } from "react";
 import { userRequest } from "../requestMethods";
 import { useHistory } from "react-router";
+import { mobile } from "../responsive";
+import { tablet } from "../responsive";
+import { laptop } from "../responsive";
 
 const KEY = process.env.REACT_APP_STRIPE;
 
@@ -23,6 +25,9 @@ const Wrapper = styled.div`
 const Title = styled.h1`
   font-weight: 300;
   text-align: center;
+  ${mobile({ fontSize: "24px", paddingTop: "20px" })}
+  ${tablet({ fontSize: "24px", fontWeight: "500", paddingTop: "20px" })}
+  ${laptop({ fontSize: "30px", fontWeight: "500", paddingTop: "20px" })}
 `;
 
 const Top = styled.div`
@@ -137,6 +142,9 @@ const Summary = styled.div`
 
 const SummaryTitle = styled.h1`
   font-weight: 200;
+  ${mobile({ fontSize: "22px" })}
+  ${tablet({ fontSize: "22px", fontWeight: "400" })}
+  ${laptop({ fontSize: "28px", fontWeight: "400" })}
 `;
 
 const SummaryItem = styled.div`
@@ -145,11 +153,15 @@ const SummaryItem = styled.div`
   justify-content: space-between;
   font-weight: ${(props) => props.type === "total" && "500"};
   font-size: ${(props) => props.type === "total" && "24px"};
+  ${mobile({ fontSize: "12px" })}
 `;
 
-const SummaryItemText = styled.span``;
+const SummaryItemText = styled.span`
+`;
 
-const SummaryItemPrice = styled.span``;
+const SummaryItemPrice = styled.span`
+${mobile({ marginRight: "-10px" })}
+`;
 
 const Button = styled.button`
   width: 100%;
@@ -240,11 +252,11 @@ const Cart = () => {
             </SummaryItem>
             <SummaryItem>
               <SummaryItemText>Estimated Shipping</SummaryItemText>
-              <SummaryItemPrice>$ 5.90</SummaryItemPrice>
+              <SummaryItemPrice>$5.90</SummaryItemPrice>
             </SummaryItem>
             <SummaryItem>
               <SummaryItemText>Shipping Discount</SummaryItemText>
-              <SummaryItemPrice>$ -5.90</SummaryItemPrice>
+              <SummaryItemPrice>$-5.90</SummaryItemPrice>
             </SummaryItem>
             <SummaryItem type="total">
               <SummaryItemText>Total</SummaryItemText>

@@ -5,6 +5,8 @@ import { useState } from "react";
 import { sliderItems } from "../data";
 import { Link } from "react-router-dom";
 import { mobile } from "../responsive";
+import { tablet } from "../responsive";
+import { laptop } from "../responsive";
 
 const Container = styled.div`
   width: 100%;
@@ -13,6 +15,7 @@ const Container = styled.div`
   position: relative;
   overflow: hidden;
   ${mobile({ display: "none" })}
+  ${tablet({ height: "50vh"})}
 `;
 
 const Arrow = styled.div`
@@ -46,6 +49,7 @@ const Slide = styled.div`
   height: 90vh;
   align-items: center;
   background-color: #${(props) => props.bg};
+  ${tablet({ height: "50vh"})}
 `;
 
 const ImgContainer = styled.div`
@@ -63,10 +67,14 @@ const InfoContainer = styled.div`
   padding: 200px 0px 0px 100px;
   position: absolute;
   color: black;
+  ${tablet({ padding: "50px 0px 0px 50px"})}
+  ${laptop({ padding: "50px 0px 0px 40px"})}
 `;
 
 const Title = styled.h1`
   font-size: 55px;
+  ${tablet({ fontSize: "34px"})}
+  ${laptop({ fontSize: "36px"})}
 `;
 
 const Desc = styled.p`
@@ -74,6 +82,8 @@ const Desc = styled.p`
   font-size: 25px;
   font-weight: 500;
   letter-spacing: 3px;
+  ${tablet({ fontSize: "20px", letterSpacing: "1px", margin: "20px 0px"})}
+  ${laptop({ fontSize: "18px", letterSpacing: "1px", margin: "15px 0px"})}
 `;
 
 const Button = styled.button`
@@ -83,10 +93,12 @@ const Button = styled.button`
   background-color: transparent;
   cursor: pointer;
   color: black;
-  border: 1px solid black;
+  border: 2px solid black;
   &:hover {
     background-color: #FFC14D;
   }
+  ${tablet({ fontSize: "16px"})}
+  ${laptop({ fontSize: "14px", padding: "10px"})}
 `;
 
 const Slider = () => {

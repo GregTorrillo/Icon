@@ -2,15 +2,19 @@ import { Badge } from "@material-ui/core";
 import { Search, ShoppingCartOutlined } from "@material-ui/icons";
 import React from "react";
 import styled from "styled-components";
-import { mobile } from "../responsive";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import { mobile } from "../responsive";
+import { tablet } from "../responsive";
+import { laptop } from "../responsive";
 
 const Container = styled.div`
   height: 7vh;
   padding: 0 70px;
   border: 0.5px solid lightgray;
-  ${mobile({ height: "50px" })}
+  ${mobile({ height: "50px", padding: "0px" })}
+  ${tablet({ padding: "0px" })}
+  ${laptop({ padding: "10px 20px" })}
 `;
 
 const Wrapper = styled.div`
@@ -19,13 +23,14 @@ const Wrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  ${mobile({ padding: "10px 0px" })}
+  ${mobile({ padding: "10px 0px"})}
 `;
 
 const Left = styled.div`
   flex: 1;
   display: flex;
   align-items: center;
+  ${mobile({ display: "none" })}
 `;
 
 const Language = styled.span`
@@ -53,7 +58,6 @@ const Center = styled.div`
 `;
 
 const Logo = styled.h1`
-  ${mobile({ fontSize: "24px" })}
 `;
 
 const Right = styled.div`
@@ -61,14 +65,13 @@ const Right = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  ${mobile({ flex: 2, justifyContent: "center" })}
 `;
 
 const MenuItem = styled.div`
   font-size: 16px;
   cursor: pointer;
   margin-left: 25px;
-  ${mobile({ fontSize: "12px", marginLeft: "10px" })}
+  ${mobile({ fontSize: "12px", margin: "0px 10px" })}
 `;
 
 const linkStyle = {

@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from "styled-components";
 import { mobile } from "../responsive";
+import { tablet } from "../responsive";
 
 const Container = styled.div`
   width: 100vw;
@@ -22,16 +23,19 @@ const Wrapper = styled.div`
   padding: 20px;
   background-color: white;
   ${mobile({ width: "75%" })}
+  ${tablet({ width: "75%" })}
 `;
 
 const Title = styled.h1`
   font-size: 24px;
   font-weight: 500;
+  ${tablet({ paddingBottom: "10px" })}
 `;
 
 const Form = styled.form`
   display: flex;
   flex-wrap: wrap;
+  ${tablet({ flexDirection: "column"})}
 `;
 
 const Input = styled.input`
@@ -39,6 +43,7 @@ const Input = styled.input`
   min-width: 40%;
   margin: 20px 10px 0px 0px;
   padding: 10px;
+  ${tablet({ padding: "20px"})}
 `;
 
 const Agreement = styled.span`

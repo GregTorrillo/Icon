@@ -5,39 +5,52 @@ import Announcement from "../components/Announcement";
 import Products from "../components/Products";
 import Newsletter from "../components/Newsletter";
 import Footer from "../components/Footer";
-import { mobile } from "../responsive";
 import { useLocation } from "react-router";
 import { useState } from "react";
+import { mobile } from "../responsive";
+import { tablet } from "../responsive";
+import { laptop } from "../responsive";
 
 const Container = styled.div``;
 
 const Title = styled.h1`
-  margin: 20px;
+  font-size: 55px;
+  padding: 20px 0px 50px 310px;
+  ${mobile({ fontSize: "34px", padding: "20px" })}
+  ${tablet({ fontSize: "44px", padding: "20px" })}
+  ${laptop({ fontSize: "44px", padding: "20px 0px 0px 40px" })}
 `;
 
 const FilterContainer = styled.div`
   display: flex;
   justify-content: space-between;
+  padding: 0 290px;
+  ${mobile({ padding: "0px" })}
+  ${tablet({ padding: "0px 10px" })}
+  ${laptop({ padding: "0px 20px" })}
 `;
 
 const Filter = styled.div`
   margin: 20px;
   ${mobile({ width: "0px 20px", display: "flex", flexDirection: "column" })}
+  ${tablet({ margin: "10px" })}
 `;
 
 const FilterText = styled.span`
   font-size: 20px;
   font-weight: 600;
   margin-right: 20px;
-  ${mobile({ marginRight: "0px" })}
+  ${mobile({ marginRight: "0px", fontSize: "16px" })}
 `;
 
 const Select = styled.select`
   padding: 10px;
   margin-right: 20px;
   ${mobile({ margin: "10px 0px" })}
+  ${tablet({ margin: "0px 5px" })}
 `;
 const Option = styled.option``;
+
 const ProductList = () => {
   const location = useLocation();
   const cat = location.pathname.split("/")[2];
@@ -66,16 +79,22 @@ const ProductList = () => {
             <Option>black</Option>
             <Option>red</Option>
             <Option>blue</Option>
-            <Option>yellow</Option>
+            <Option>gold</Option>
             <Option>purple</Option>
           </Select>
           <Select name="size" onChange={handleFilters}>
             <Option disabled>Size</Option>
-            <Option>XS</Option>
-            <Option>S</Option>
-            <Option>M</Option>
-            <Option>L</Option>
-            <Option>XL</Option>
+            <Option>5</Option>
+            <Option>6</Option>
+            <Option>7</Option>
+            <Option>8</Option>
+            <Option>9</Option>
+            <Option>10</Option>
+            <Option>11</Option>
+            <Option>12</Option>
+            <Option>13</Option>
+            <Option>14</Option>
+            <Option>15</Option>
           </Select>
         </Filter>
         <Filter>

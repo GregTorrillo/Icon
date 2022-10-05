@@ -2,6 +2,8 @@ import React from 'react'
 import { Send } from "@material-ui/icons";
 import styled from "styled-components";
 import { mobile } from "../responsive";
+import { tablet } from "../responsive";
+import { laptop } from "../responsive";
 
 const Container = styled.div`
   height: 40vh;
@@ -15,20 +17,26 @@ const Container = styled.div`
 const Title = styled.h1`
   font-size: 40px;
   margin-bottom: 20px;
+  ${mobile({ fontSize: "22px" })}
+  ${tablet({ fontSize: "30px"})}
+  ${laptop({ fontSize: "26px"})}
 `;
 
 const Desc = styled.div`
   font-size: 20px;
   font-weight: 300;
   margin-bottom: 20px;
-  ${mobile({ textAlign: "center" })}
+  ${mobile({ textAlign: "center", fontSize: "14px", padding: "0 25px" })}
+  ${tablet({ textAlign: "center", fontSize: "16px", padding: "0px" })}
+  ${laptop({ textAlign: "center", fontSize: "14px", padding: "0px" })}
 `;
 
 const Disclaimer = styled.div`
   font-size: 14px;
   padding-top: 10px;
   font-weight: 300;
-  ${mobile({ textAlign: "center" })}
+  ${mobile({ textAlign: "center", fontSize: "10px", padding: "10px 40px" })}
+  ${laptop({ textAlign: "center", fontSize: "12px", padding: "10px" })}
 `;
 
 const InputContainer = styled.div`
@@ -39,6 +47,8 @@ const InputContainer = styled.div`
   justify-content: space-between;
   border: 1px solid lightgray;
   ${mobile({ width: "80%" })}
+  ${tablet({ width: "50%" })}
+  ${laptop({ width: "40%" })}
 `;
 
 const Input = styled.input`

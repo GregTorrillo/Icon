@@ -1,10 +1,11 @@
 import React from "react";
-import { Add, Remove } from "@material-ui/icons";
+import { Add, Remove, DeleteOutline } from "@material-ui/icons";
+import { removeProduct, updateProduct, clearCart } from "../redux/cartRedux";
 import styled from "styled-components";
 import Announcement from "../components/Announcement";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import StripeCheckout from "react-stripe-checkout";
 import { useEffect, useState } from "react";
 import { userRequest } from "../requestMethods";
@@ -49,10 +50,6 @@ const TopButton = styled.button`
   &:hover {
     background-color: #FFC14D;
   }
-`;
-
-const TopTexts = styled.div`
-  ${mobile({ display: "none" })}
 `;
 
 const Bottom = styled.div`
@@ -105,12 +102,13 @@ const PriceDetail = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding-bottom: 50px;
 `;
 
 const ProductAmountContainer = styled.div`
   display: flex;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 `;
 
 const ProductAmount = styled.div`
@@ -120,7 +118,7 @@ const ProductAmount = styled.div`
 `;
 
 const ProductPrice = styled.div`
-  font-size: 30px;
+  font-size: 28px;
   font-weight: 200;
   ${mobile({ marginBottom: "20px" })}
 `;
@@ -170,10 +168,20 @@ const Button = styled.button`
   ${mobile({ flexDirection: "column" })}
 `;
 
+const Button2 = styled.button`
+  width: 100%;
+  padding-left: 20px;
+  background-color: transparent;
+  color: red;
+  cursor: pointer;
+  border: none;
+`;
+
 const Cart = () => {
   const cart = useSelector((state) => state.cart);
   const [stripeToken, setStripeToken] = useState(null);
   const history = useHistory();
+  const dispatch = useDispatch();
 
   const onToken = (token) => {
     setStripeToken(token);
@@ -188,12 +196,33 @@ const Cart = () => {
         });
         history.push("/success", {
           stripeData: res.data,
-          products: cart.total,
-        });
+          products: cart });
+          dispatch(
+            clearCart()
+          );
       } catch {}
     };
     stripeToken && makeRequest();
+      // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [stripeToken, cart.total, history]);
+
+  const handleClick = (x, y, z) => {
+    dispatch(
+      removeProduct({x, y, z})
+    );
+  };
+
+  const handleQuantity = (mark, x) => {
+    if (mark === "-") {
+      dispatch(
+        updateProduct({mark, x})
+      );
+    } else {
+      dispatch(
+        updateProduct({mark, x})
+      );
+    }
+  };
 
   return (
     <Container>
@@ -205,7 +234,6 @@ const Cart = () => {
           <Link to="/">
             <TopButton>CONTINUE SHOPPING</TopButton>
           </Link>
-          <TopTexts></TopTexts>
         </Top>
         <Bottom>
           <Info>
@@ -227,10 +255,13 @@ const Cart = () => {
                   </Details>
                 </ProductDetail>
                 <PriceDetail>
-                  <ProductAmountContainer>
-                    <Add />
+                <ProductAmountContainer>
+                    <Add onClick={() => handleQuantity("+", product._id)}/>
                     <ProductAmount>{product.quantity}</ProductAmount>
-                    <Remove />
+                    <Remove onClick={() => handleQuantity("-", product._id)}/>
+                    <Button2 onClick={() => handleClick(product._id, product.price, product.quantity)} >
+                      <DeleteOutline />
+                    </Button2>
                   </ProductAmountContainer>
                   <ProductPrice>
                     $ {product.price * product.quantity}
@@ -248,11 +279,11 @@ const Cart = () => {
             </SummaryItem>
             <SummaryItem>
               <SummaryItemText>Estimated Shipping</SummaryItemText>
-              <SummaryItemPrice>$5.00</SummaryItemPrice>
+              <SummaryItemPrice>$25.00</SummaryItemPrice>
             </SummaryItem>
             <SummaryItem>
               <SummaryItemText>Shipping Discount</SummaryItemText>
-              <SummaryItemPrice>$-5.00</SummaryItemPrice>
+              <SummaryItemPrice>$-25.00</SummaryItemPrice>
             </SummaryItem>
             <SummaryItem type="total">
               <SummaryItemText>Total</SummaryItemText>

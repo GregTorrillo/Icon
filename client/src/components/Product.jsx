@@ -14,7 +14,7 @@ const Container = styled.div`
   background-color: #F5F5F5;
   position: relative;
   &:hover {
-    background-color: #FFC14D;
+    background-color: rgba(255, 193, 77, .25);
   }
 `;
 

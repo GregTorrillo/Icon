@@ -165,6 +165,10 @@ const Button = styled.button`
   background-color: black;
   color: white;
   font-weight: 600;
+  &:hover {
+    color: #FFC14D;
+    cursor: pointer;
+  }
   ${mobile({ flexDirection: "column" })}
 `;
 

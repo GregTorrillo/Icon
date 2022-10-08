@@ -59,6 +59,8 @@ const Bottom = styled.div`
 
 const Info = styled.div`
   flex: 3;
+  width: 100%;
+  ${mobile({ display: "flex", flexDirection: "column" })}
 `;
 
 const Product = styled.div`
@@ -70,10 +72,12 @@ const Product = styled.div`
 const ProductDetail = styled.div`
   flex: 2;
   display: flex;
+  ${mobile({flexDirection: "column" })}
 `;
 
 const Image = styled.img`
   width: 200px;
+  ${mobile({width: "100%" })}
 `;
 
 const Details = styled.div`
@@ -85,7 +89,9 @@ const Details = styled.div`
 
 const ProductName = styled.span``;
 
-const ProductId = styled.span``;
+const ProductId = styled.span`
+${mobile({display: "none" })}
+`;
 
 const ProductColor = styled.div`
   width: 20px;

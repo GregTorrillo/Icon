@@ -37,13 +37,24 @@ const Success = () => {
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
+        fontSize: 24,
+        textAlign: "center",
       }}
     >
       {orderId
         ? `Order has been created successfully. Your order number is ${orderId}`
         : `Successfull. Your order is being prepared...`}
-        <Link to="/">
-      <button style={{ padding: 10, marginTop: 20 }}>Go to Homepage</button>
+      <Link to="/">
+        <button
+          style={{
+            padding: 20,
+            marginTop: 20,
+            fontSize: 22,
+            backgroundColor: "#FFC14D",
+          }}
+        >
+          Go to Homepage
+        </button>
       </Link>
     </div>
   );

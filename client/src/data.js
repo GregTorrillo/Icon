@@ -9,7 +9,7 @@ export const sliderItems = [
       id: 2,
       img: "/img/hero-2.png",
       title: "RED RIBBON RECON",
-      desc: "The Supreme x Louis Vuitton x Red Ribbon Recon.",
+      desc: "The Supreme Louis Vuitton Red Ribbon Recon.",
     },
     {
       id: 3,

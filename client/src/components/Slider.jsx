@@ -15,7 +15,7 @@ const Container = styled.div`
   position: relative;
   overflow: hidden;
   ${tablet({ height: "50vh"})}
-  ${mobile({ display: "none" })}
+  ${mobile({ height: "30vh"})}
 `;
 
 const Arrow = styled.div`
@@ -35,6 +35,7 @@ const Arrow = styled.div`
   cursor: pointer;
   opacity: 0.5;
   z-index: 2;
+  ${mobile({width: "30px", height: "30px" })}
 `;
 
 const Wrapper = styled.div`
@@ -50,6 +51,7 @@ const Slide = styled.div`
   align-items: center;
   background-color: #${(props) => props.bg};
   ${tablet({ height: "50vh"})}
+  ${mobile({ height: "30vh"})}
 `;
 
 const ImgContainer = styled.div`
@@ -69,12 +71,14 @@ const InfoContainer = styled.div`
   color: black;
   ${laptop({ padding: "50px 0px 0px 40px"})}
   ${tablet({ padding: "50px 0px 0px 50px"})}
+  ${mobile({ padding: "10px 0px 0px 20px"})}
 `;
 
 const Title = styled.h1`
   font-size: 55px;
   ${laptop({ fontSize: "36px"})}
   ${tablet({ fontSize: "34px"})}
+  ${mobile({ fontSize: "18px"})}
 `;
 
 const Desc = styled.p`
@@ -83,7 +87,8 @@ const Desc = styled.p`
   font-weight: 500;
   letter-spacing: 3px;
   ${laptop({ fontSize: "18px", letterSpacing: "1px", margin: "15px 0px"})}
-  ${tablet({ fontSize: "20px", letterSpacing: "1px", margin: "20px 0px"})}
+  ${tablet({ fontSize: "20px", letterSpacing: "1px", margin: "10px 0px"})}
+  ${mobile({ fontSize: "12px", letterSpacing: "0px", margin: "5px 0px"})}
 `;
 
 const Button = styled.button`
@@ -99,6 +104,7 @@ const Button = styled.button`
   }
   ${laptop({ fontSize: "14px", padding: "10px"})}
   ${tablet({ fontSize: "16px"})}
+  ${mobile({ fontSize: "6px", padding: "5px"})}
 `;
 
 const Slider = () => {

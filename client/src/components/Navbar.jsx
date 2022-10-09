@@ -23,7 +23,7 @@ const Wrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  ${mobile({ padding: "10px 0px"})}
+  ${mobile({ padding: "0px"})}
 `;
 
 const Left = styled.div`
@@ -49,7 +49,6 @@ const SearchContainer = styled.div`
 
 const Input = styled.input`
   border: none;
-  ${mobile({ width: "50px" })}
 `;
 
 const Center = styled.div`
@@ -58,6 +57,7 @@ const Center = styled.div`
 `;
 
 const Logo = styled.h1`
+
 `;
 
 const Right = styled.div`

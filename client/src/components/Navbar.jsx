@@ -12,9 +12,9 @@ const Container = styled.div`
   height: 7vh;
   padding: 0 70px;
   border: 0.5px solid lightgray;
-  ${mobile({ height: "50px", padding: "0px" })}
-  ${tablet({ padding: "0px" })}
   ${laptop({ padding: "10px 20px" })}
+  ${tablet({ padding: "0px" })}
+  ${mobile({ height: "55px", padding: "0px" })}
 `;
 
 const Wrapper = styled.div`

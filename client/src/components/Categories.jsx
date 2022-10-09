@@ -8,7 +8,7 @@ const Container = styled.div`
   display: flex;
   padding: 0px 20px 200px 20px;
   justify-content: space-between;
-  ${mobile({ padding: "0px", flexDirection:"column" })}
+  ${mobile({ padding: "0px 0px 100px 0px", flexDirection:"column" })}
 `;
 
 const Categories = () => {

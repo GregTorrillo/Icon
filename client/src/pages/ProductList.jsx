@@ -16,18 +16,18 @@ const Container = styled.div``;
 const Title = styled.h1`
   font-size: 55px;
   padding: 20px 0px 50px 310px;
-  ${mobile({ fontSize: "34px", padding: "20px" })}
-  ${tablet({ fontSize: "44px", padding: "20px" })}
   ${laptop({ fontSize: "44px", padding: "20px 0px 0px 40px" })}
+  ${tablet({ fontSize: "44px", padding: "20px" })}
+  ${mobile({ fontSize: "38px", padding: "50px 0px 20px 0px", textAlign: "center" })}
 `;
 
 const FilterContainer = styled.div`
   display: flex;
   justify-content: space-between;
   padding: 0 290px;
-  ${mobile({ padding: "0px" })}
-  ${tablet({ padding: "0px 10px" })}
   ${laptop({ padding: "0px 20px" })}
+  ${tablet({ padding: "0px 10px" })}
+  ${mobile({ padding: "0px 10px" })}
 `;
 
 const Filter = styled.div`
@@ -40,14 +40,14 @@ const FilterText = styled.span`
   font-size: 20px;
   font-weight: 600;
   margin-right: 20px;
-  ${mobile({ marginRight: "0px", fontSize: "16px" })}
+  ${mobile({ marginRight: "0px", fontSize: "16px", paddingBottom: "10px", textAlign: "center" })}
 `;
 
 const Select = styled.select`
   padding: 10px;
   margin-right: 20px;
-  ${mobile({ margin: "10px 0px" })}
   ${tablet({ margin: "0px 5px" })}
+  ${mobile({ margin: "5px 0px", padding: "10px" })}
 `;
 const Option = styled.option``;
 

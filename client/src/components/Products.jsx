@@ -12,20 +12,19 @@ const Container = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  ${mobile({ padding: "0px" })}
-  ${tablet({ padding: "0px 0px 150px 0px"})}
   ${laptop({ padding: "0px 150px 150px 150px"})}
+  ${tablet({ padding: "0px 10px 150px 10px"})}
+  ${mobile({ padding: "0px 10px 100px 10px", justifyContent: "center" })}
 `;
 
 const Title = styled.h1`
     color:black;
     font-size: 40px;
     padding: 50px 0px 50px 310px;
-    ${mobile({ padding: "20px 0px 10px 10px", fontSize: "24px" })}
-    ${tablet({ padding: "100px 0px 50px 60px"})}
     ${laptop({ padding: "50px 0px 50px 160px", fontSize: "32px"})}
-
-`;
+    ${tablet({ padding: "100px 0px 50px 60px"})}
+    ${mobile({ textAlign: "center", fontSize: "28px", padding: "50px 0px 20px 0px" })}
+`; 
 
 const Products = ({cat, filters, sort}) => {
   const [products, setProducts] = useState([]);

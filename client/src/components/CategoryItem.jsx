@@ -37,9 +37,9 @@ const Title = styled.h1`
     margin-bottom: 20px;
     font-size: 60px;
     text-shadow: 2px 2px 5px #000000;
-    ${mobile({ fontSize: "50px" })}
-    ${tablet({ fontSize: "50px"})}
     ${laptop({ fontSize: "50px"})}
+    ${tablet({ fontSize: "50px"})}
+    ${mobile({ fontSize: "50px" })}
 `;
 
 const Button = styled.button`
@@ -55,9 +55,9 @@ const Button = styled.button`
       background-color: #FFC14D;
       color: white;
     }
-    ${mobile({ padding: "10px" })}
-    ${tablet({ padding: "10px" })}
     ${laptop({ padding: "10px" })}
+    ${tablet({ padding: "10px" })}
+    ${mobile({ padding: "10px" })}
 `;
 
 

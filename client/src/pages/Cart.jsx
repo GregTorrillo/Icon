@@ -27,9 +27,9 @@ const Wrapper = styled.div`
 const Title = styled.h1`
   font-weight: 300;
   text-align: center;
-  ${mobile({ fontSize: "24px", paddingTop: "20px" })}
-  ${tablet({ fontSize: "24px", fontWeight: "500", paddingTop: "20px" })}
   ${laptop({ fontSize: "30px", fontWeight: "500", paddingTop: "20px" })}
+  ${tablet({ fontSize: "24px", fontWeight: "500", paddingTop: "20px" })}
+  ${mobile({ fontSize: "24px", paddingTop: "20px" })}
 `;
 
 const Top = styled.div`
@@ -72,7 +72,7 @@ const Product = styled.div`
 const ProductDetail = styled.div`
   flex: 2;
   display: flex;
-  ${mobile({flexDirection: "column" })}
+  ${mobile({flexDirection: "column", alignItems: "center", justifyContent: "center" })}
 `;
 
 const Image = styled.img`
@@ -126,7 +126,7 @@ const ProductAmount = styled.div`
 const ProductPrice = styled.div`
   font-size: 28px;
   font-weight: 200;
-  ${mobile({ marginBottom: "20px" })}
+  ${mobile({ marginBottom: "20px", fontSize: "24px" })}
 `;
 
 const Hr = styled.hr`
@@ -145,9 +145,9 @@ const Summary = styled.div`
 
 const SummaryTitle = styled.h1`
   font-weight: 200;
-  ${mobile({ fontSize: "22px" })}
-  ${tablet({ fontSize: "22px", fontWeight: "400" })}
   ${laptop({ fontSize: "28px", fontWeight: "400" })}
+  ${tablet({ fontSize: "22px", fontWeight: "400" })}
+  ${mobile({ fontSize: "20px" })}
 `;
 
 const SummaryItem = styled.div`

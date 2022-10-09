@@ -66,6 +66,7 @@ const Info = styled.div`
 const Product = styled.div`
   display: flex;
   justify-content: space-between;
+  padding-bottom: 50px;
   ${mobile({ flexDirection: "column" })}
 `;
 
@@ -108,7 +109,6 @@ const PriceDetail = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-bottom: 50px;
 `;
 
 const ProductAmountContainer = styled.div`

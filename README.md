@@ -1,7 +1,7 @@
 <h1 align="center">ICON - E-commerce App </h1>
 
 <div align="center">
-	  <img src="https://github.com/GregTorrillo/Coinverse/blob/master/coinverse.gif" width="100%" />
+	  <img src="https://github.com/GregTorrillo/Icon/blob/main/icon.mp4" width="100%" />
 </div>
 <br>
 <p align="center"><a href="https://icon-sneakers.netlify.app/" target="_blank" rel="noreferrer"><img src="https://github.com/GregTorrillo/GregTorrillo/blob/main/assets/github-website-button.png" alt="Website" width="120px" height="45px"></a></p>

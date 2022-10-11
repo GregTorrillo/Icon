@@ -26,4 +26,5 @@ When I improve this project, I would add more products, an image slider on the p
 <img src="https://github.com/GregTorrillo/GregTorrillo/blob/main/assets/github-mongodb.png" alt="mongodb" width="80" height="80"/>
 <img src="https://github.com/GregTorrillo/GregTorrillo/blob/main/assets/github-firebase.png" alt="firebase" width="80" height="80"/>
 <img src="https://github.com/GregTorrillo/GregTorrillo/blob/main/assets/github-material-ui.png" alt="material-ui" width="80" height="80"/> 
+<img src="https://github.com/GregTorrillo/GregTorrillo/blob/main/assets/github-PS.png" alt="photoshop" width="80" height="80"/> 
 </p>

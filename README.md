@@ -4,7 +4,7 @@
 	  <img src="https://github.com/GregTorrillo/GregTorrillo/blob/main/assets/icon.gif" width="100%" />
 </div>
 <br>
-<p align="center"><a href="https://icon-sneakers.netlify.app/" target="_blank" rel="noreferrer"><img src="https://github.com/GregTorrillo/GregTorrillo/blob/main/assets/github-website-button.png" alt="Website" width="120px" height="45px"></a></p>
+<p align="center"><a href="https://icon-j9wm.onrender.com/" target="_blank" rel="noreferrer"><img src="https://github.com/GregTorrillo/GregTorrillo/blob/main/assets/github-website-button.png" alt="Website" width="120px" height="45px"></a></p>
 
 ## Motivation: 
 E-commerce and shopping online is a way of life that affects nearly everyone.  I wanted to build this app to have a better understanding of the entire process.  I chose one of the most iconic products as the centerpiece of my store.  

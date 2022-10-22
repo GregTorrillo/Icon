@@ -1,4 +1,4 @@
-<h1 align="center">ICON - E-commerce App </h1>
+<h1 align="center">ICON - Ecommerce App </h1>
 
 <div align="center">
 	  <img src="https://github.com/GregTorrillo/GregTorrillo/blob/main/assets/icon.gif" width="100%" />
